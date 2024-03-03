@@ -14,8 +14,10 @@ public class CorsConfig implements WebMvcConfigurer {
 	public void addCorsMappings(CorsRegistry registry) {
 	    registry.addMapping("/api/**")
 	            .allowedOrigins("*")
+	            .allowedOrigins("https://your-railway-app-name.railway.app")
 	            .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
 	            .allowedHeaders("*")
+	            .exposedHeaders("Authorization")
 	            .allowCredentials(true)
 	            .maxAge(3600);
 	}
