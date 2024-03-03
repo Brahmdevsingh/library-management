@@ -18,7 +18,7 @@ import com.example.library.entity.Books;
 import com.example.library.services.BookService;
 
 @RestController
-@CrossOrigin(origins = {"https://your-railway-app-name.railway.app", "*"})
+@CrossOrigin("https://your-railway-app-name.railway.app")
 public class BookController {
 	
 	@Autowired

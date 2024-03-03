@@ -12,14 +12,13 @@ public class CorsConfig implements WebMvcConfigurer {
 
 	@Override
 	public void addCorsMappings(CorsRegistry registry) {
-	    registry.addMapping("/api/**")
-	            .allowedOrigins("*")
-	            .allowedOrigins("https://your-railway-app-name.railway.app")
-	            .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
-	            .allowedHeaders("*")
-	            .exposedHeaders("Authorization")
-	            .allowCredentials(true)
-	            .maxAge(3600);
+		 registry.addMapping("/v3/api-docs")
+         .allowedOrigins("https://library-management-production-3216.up.railway.app")
+         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+         .allowedHeaders("*")
+         .exposedHeaders("Authorization")
+         .allowCredentials(true)
+         .maxAge(3600);
 	}
 }
 
