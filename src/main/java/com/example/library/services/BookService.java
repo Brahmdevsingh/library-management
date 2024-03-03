@@ -75,4 +75,9 @@ public class BookService {
 		 List<Books> allBooks = bookRepository.findBybookGenre(bookGenre); 
 		 return allBooks;
 	}
+
+	public List<Books> getAllBooks() {
+		// TODO Auto-generated method stub
+		return bookRepository.findAll();
+	}
 }

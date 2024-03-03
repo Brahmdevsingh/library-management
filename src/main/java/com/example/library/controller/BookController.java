@@ -51,5 +51,10 @@ public class BookController {
 	public List<Books> getAllGenreBooks(@PathVariable String bookGenre){
 		return bookService.getAllGenreBooks(bookGenre);
 	}
+	
+	@GetMapping("/getAllBooks")
+	public List<Books> getAllBooks(){
+		return bookService.getAllBooks();
+	}
 
 }
